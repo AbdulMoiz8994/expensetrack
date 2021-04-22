@@ -1,27 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+// import context which we create and make as provider  and also ad prop value in contextapi file
+import {CreateContext} from '../Context/CreateContext'
 
 export const History = () => {
-    let initialState={
-        transcactions:[
-            {id:1, desc:"Salary",amount:1000},
-            {id:2,desc: "Rent",amount:2000},
-            {id:3,desc:"Dinner",amount:-200}
-        ]
-    }
-    const {transcactions}= initialState
+const {transcactions}=useContext(CreateContext)    
+console.log(transcactions);
     return (
         <div>
           <h2>History</h2> 
-          {transcactions.map((objValues) =>{
-            return(
-            <div key={objValues.id}>
-                <ul>
-<li>{objValues.desc} <span>{objValues.amount}</span></li>
-                </ul>
-                </div>
-            )
-          
-          })}
+        {transcactions.map((transactionObj) =>{
+          return(
+            <div key={transactionObj.id}>
+              <ul>
+              <li>{transactionObj.desc} <span>{transactionObj.amount}</span></li>
+              </ul>
+            </div>
+          )
+        })}
           
         </div>
     )
