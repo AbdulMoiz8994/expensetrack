@@ -11,7 +11,7 @@ const {transcactions}=useContext(CreateContext);
 const data=transcactions.map((amountOnly) => amountOnly.amount)
 console.log(data);
 
-const balance=data.reduce((acc,value) => acc +=value).toFixed(2)
+const balance=data.reduce(((acc,value) => acc +=value),0).toFixed(2)
 console.log(balance);
 // we get the sum of our value via rducer (acc + value)(acc +(-value)) it works like this
 //we used  reduce to add array's values which accept two parameter

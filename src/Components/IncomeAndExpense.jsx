@@ -11,10 +11,13 @@ console.log(transcactions);
 
 const amounts=transcactions.map((amount) => amount.amount)
 console.log(amounts);
-const income=amounts.filter((amounts) => amounts > 0).reduce((acc,value) => acc +=value).toFixed(2)
+const income=amounts.filter((amounts) => amounts > 0).reduce(((acc,value) => acc +=value),0).toFixed(2)
+// The reducer by default value id 0 and it will assign to acc
 console.log(income);
 
-const expense=amounts.filter((amounts)=> amounts < 0).reduce((acc,value) => acc=acc+value).toFixed(2)
+const expense=amounts.filter((amounts)=> amounts < 0).reduce(((acc,value) => acc=acc+value),0).toFixed(2)
+// The reducer by default value id 0 and it will assign to acc
+
 console.log(expense); 
 
     return (

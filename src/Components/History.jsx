@@ -4,16 +4,17 @@ import React, { useContext } from 'react'
 import {CreateContext} from '../Context/CreateContext'
 
 export const History = () => {
-const {transcactions}=useContext(CreateContext)    
-console.log(transcactions);
+const {transcactions,deletetransaction}=useContext(CreateContext)    
+console.log(transcactions,deletetransaction);
     return (
         <div>
           <h2>History</h2> 
-        {transcactions.map((transactionObj) =>{
+        {transcactions.map((transactionObj,id) =>{
+
           return(
-            <div key={transactionObj.id}>
+            <div key={id}>
               <ul>
-              <li>{transactionObj.desc} <span>{transactionObj.amount}</span></li>
+              <li>{transactionObj.desc} <span>{transactionObj.amount} <button onClick={() => deletetransaction(transactionObj.id)}>X</button></span></li>
               </ul>
             </div>
           )
