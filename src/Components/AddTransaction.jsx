@@ -17,10 +17,11 @@ e.preventDefault()
 // console.log(e.target); From e we give mutiple things from target we get the whole form
 console.log(desc, amount);
 const ADDInpt={
+    id: new Date().getTime(),
     desc,
     amount: Number(amount)
 }
-
+// console.log(ADDInpt.id); //it will generate for us a unique numbers from when time was started till hours 
 ADDValue.AddTransaction(ADDInpt)
 setDesc('');
 setAmount(0)
@@ -34,12 +35,12 @@ setAmount(0)
     <label>
     Add Transaction
 </label>
-<input type="text" value={desc} name="addTranscation" onChange={(e) => setDesc(e.target.value)}/>
+<input type="text" value={desc} name="addTranscation" required onChange={(e) => setDesc(e.target.value)}/>
 
 <label>
     Amount(Income,Expense)
 </label>
-<input type="number" value={amount} name="amount" onChange={e => setAmount(e.target.value)}/>
+<input type="number" value={amount} name="amount" required onChange={e => setAmount(e.target.value)}/>
 
 <input type="submit" value="Submit"/>
 </form>

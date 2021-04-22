@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react'
+import React, {  useReducer } from 'react'
 import {CreateContext} from './CreateContext';
 import {ContextReducer}from './ContextReducer'
 import {ADD_TRANSACTION,DELETE_TRANSACTION} from './types'
@@ -16,6 +16,8 @@ export const UseContext = (props) => {
         ]
     }
 // const {transcactions}=initialState
+
+
 const [state,dispatch]=useReducer(ContextReducer,initialState)
 
 // console.log(state);
