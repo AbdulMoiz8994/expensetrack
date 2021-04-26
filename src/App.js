@@ -18,7 +18,7 @@ function App() {
     <div>
       <Header />
       <UseContext>
-      <div>
+      <div className="main-div">
         <Balance />
         <IncomeAndExpense />
         <History />

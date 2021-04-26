@@ -21,12 +21,15 @@ const expense=amounts.filter((amounts)=> amounts < 0).reduce(((acc,value) => acc
 console.log(expense); 
 
     return (
-        <div>
-<h2>Income</h2>
-<h3>{income}</h3>
-
-<h2>Expense</h2>
-<h3>{expense}</h3>
+        <div className="income-and-expense">
+            <div className="income">
+<h2 >Income</h2>
+<h3 className="income-amount">${income}</h3>
+</div>
+<div className="expense">
+<h2 >Expense</h2>
+<h3 className="expense-amount">${expense}</h3>
+</div>
         </div>
     )
 }

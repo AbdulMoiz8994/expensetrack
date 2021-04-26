@@ -18,8 +18,8 @@ console.log(balance);
 
     return (
         <div>
-<h2>Your Balance</h2>
-   <h3>${balance}</h3>
+<h2 className="balance">Your Balance</h2>
+   <h3 className="balance-amount">${balance}</h3>
         </div>
     )
 }

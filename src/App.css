@@ -1,3 +1,4 @@
+
 * {
   margin: 0%;
   padding: 0%;
@@ -8,4 +9,56 @@
   text-align: center;
   margin: 2vmax;
   font-family: "Roboto", sans-serif;
+  
+}
+
+/* componets styling */
+.main-div {
+  width: 35%;
+  margin: 40px auto;
+  min-width: 200px;
+  max-width: 50%;
+  /* border: 3px dotted gray; */
+  min-height: auto;
+  border-radius: 18px;
+}
+.balance,.balance-amount {
+  font-family: "Roboto", sans-serif;
+  padding: 45px 45px 0px 45px;
+  font-size: 3em;
+  font-weight: lighter;
+}
+.balance-amount{
+  padding: 0px 45px 20px 45px;
+  color:  #5A20CB;
+}
+.income-and-expense{
+  display: inline-flex;
+  justify-content: center;
+  width: 75%;
+  height: 100px;
+  padding: 20px;
+  margin: 20px;
+  min-width: 200px;
+  font-weight: 100;
+  font-size: 1.5em;
+}
+.income{
+  border-right: 1px solid gray;
+  border-radius: 5px;
+  padding-right: 30px;
+  height: 70px;
+}
+.income > h2 ,.expense > h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;  
+}
+.expense{
+  padding-left: 30px;
+}
+.income-amount{
+  color: rgba(88, 196, 88, 0.9);
+}
+.expense-amount{
+  color: rgba(221, 43, 43,  0.9);
 }
