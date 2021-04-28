@@ -18,11 +18,11 @@ export const History = () => {
               <li className={transactionObj.amount < 0 ? "minus" : "plus"} style={{paddingBottom: '20px'}} >
                 {transactionObj.desc} 
               <span>{transactionObj.amount < 0 ? "-" : "+" }${(transactionObj.amount)} 
-              <button className="delete-button" onClick={() => deletetransaction(transactionObj.id)}>
-                X
-                </button>
+             
                 </span>
-                
+                <button className="delete-button" onClick={() => deletetransaction(transactionObj.id)}>
+                X
+                </button>   
                 </li>
             
           </div>

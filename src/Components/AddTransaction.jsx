@@ -30,19 +30,20 @@ setAmount(0)
 
 
     return (
-     <div>
-<form onSubmit={onSubmitFunc}>
-    <label>
+     <div className="main-Transactions">
+<form onSubmit={onSubmitFunc} className="form-control">
+    <label className="AddTransaction">
     Add Transaction
 </label>
-<input type="text" value={desc} name="addTranscation" required onChange={(e) => setDesc(e.target.value)}/>
+<input className="addtext" type="text" value={desc} name="addTranscation" required onChange={(e) => setDesc(e.target.value)}/>
 
-<label>
-    Amount(Income,Expense)
+<label className="AddTransaction">
+    Amount
+    <p className="icomeandexpense">(Income,Expense)</p>
 </label>
-<input type="number" value={amount} name="amount" required onChange={e => setAmount(e.target.value)}/>
+<input className="addtext" type="number" value={amount} name="amount" required onChange={e => setAmount(e.target.value)}/>
 
-<input type="submit" value="Submit"/>
+<input className="button" type="submit" value="Add Transaction"/>
 </form>
         </div>
     )
