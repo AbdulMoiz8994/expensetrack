@@ -9,9 +9,11 @@
   text-align: center;
   margin: 2vmax;
   font-family: "Roboto", sans-serif;
-  
 }
+.header > h1{
+  text-decoration: underline #5A20CB;
 
+}
 /* componets styling */
 .main-div {
   width: 35%;
@@ -24,12 +26,12 @@
 }
 .balance,.balance-amount {
   font-family: "Roboto", sans-serif;
-  padding: 45px 45px 0px 45px;
+  padding: 25px 25px 0px 25px;
   font-size: 3em;
   font-weight: lighter;
 }
 .balance-amount{
-  padding: 0px 45px 20px 45px;
+  padding: 0px 25px 20px 25px;
   color:  #5A20CB;
 }
 .income-and-expense{
@@ -61,4 +63,42 @@
 }
 .expense-amount{
   color: rgba(221, 43, 43,  0.9);
+}
+.history-heading{
+  margin: 10px;
+  padding: 20px 0px 10px 20px;
+  font-family: "Roboto", sans-serif;
+   font-size: 40px;
+   font-weight: lighter;
+}
+.history{
+  list-style-type: none;
+  border: 1px solid black;;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  width: 80%;
+  height: 40px;
+  min-width: 200px;
+  text-align: center;
+  border-color: blueviolet;
+}
+.history > li{
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 6px;
+}
+.delete-button{
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  right: 37.6%;
+  line-height: 36px;
+  margin-top: -6px;
+}
+.history li:hover .delete-button{
+   opacity: 0.9;
+   background-color: brown;
 }

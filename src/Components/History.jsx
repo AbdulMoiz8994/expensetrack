@@ -8,19 +8,27 @@ export const History = () => {
   console.log( deletetransaction);
   return (
     <div>
-      <h2>History</h2>
+      <h2 className="history-heading">History</h2>
       <ul>
 
       {transcactions.map((transactionObj) => {
 
         return (
-          <div key={transactionObj.id}>
-              <li  style={{paddingBottom: '20px'}} >{transactionObj.desc} <span>{transactionObj.amount} <button onClick={() => deletetransaction(transactionObj.id)}>X</button></span></li>
+          <div className="history" key={transactionObj.id}>
+              <li className={transactionObj.amount < 0 ? "minus" : "plus"} style={{paddingBottom: '20px'}} >
+                {transactionObj.desc} 
+              <span>{transactionObj.amount < 0 ? "-" : "+" }${(transactionObj.amount)} 
+              <button className="delete-button" onClick={() => deletetransaction(transactionObj.id)}>
+                X
+                </button>
+                </span>
+                
+                </li>
+            
           </div>
         )
       })}
             </ul>
-
     </div>
   )
 }
